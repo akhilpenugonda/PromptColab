@@ -28,13 +28,25 @@ const Nav = () => {
           height={30}
           className='object-contain'
         />
-        <p className='logo_text'>Promptopia</p>
+        <p className='logo_text'>Prompt Labs</p>
       </Link>
 
       {/* Desktop Navigation */}
       <div className='sm:flex hidden'>
         {session?.user ? (
           <div className='flex gap-3 md:gap-5'>
+
+            <Link href='/generate-prompt' className='outline_btn'>
+              Generate AI Prompt
+              <Image
+                src='/assets/images/chemistry-lab.png'
+                width={25}
+                height={25}
+                className='ml-2 rounded-full'
+                alt='profile'
+              />
+            </Link>
+
             <Link href='/create-prompt' className='black_btn'>
               Create Post
             </Link>
@@ -100,6 +112,13 @@ const Nav = () => {
                   onClick={() => setToggleDropdown(false)}
                 >
                   Create Prompt
+                </Link>
+                <Link
+                  href='/generate-prompt'
+                  className='dropdown_link'
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  Generate AI Prompt
                 </Link>
                 <button
                   type='button'
