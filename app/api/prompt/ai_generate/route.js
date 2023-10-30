@@ -25,10 +25,3 @@ export const POST = async (request) => {
         return null;
     }
 };
-
-// Example usage:
-const userId = '123';
-const prompt = 'Write code to call an API';
-const tag = 'JavaScript';
-const newPrompt = await createPrompt(userId, prompt, tag);
-console.log(newPrompt);
